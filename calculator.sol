@@ -6,6 +6,7 @@ contract calculator
     int prod;
     int diff;
     int pow=1;
+    int mod;
 
     
    function calculator(int a,int b) public
@@ -17,6 +18,7 @@ contract calculator
          {
             pow=pow*a;
          }
+         mod=a%b;
    }
     function getsum() public view returns(int)
     {
@@ -33,6 +35,10 @@ contract calculator
     function getpow() public view returns(int)
     {
         return pow;
+    }
+    function getmod() public view returns(int)
+    {
+        return mod;
     }
     
 }
